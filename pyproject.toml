@@ -1,0 +1,11 @@
+[project]
+name = "lou-streamlit"
+version = "0.1.0"
+description = "Application Streamlit du LOU Rugby pour le suivi et l'analyse des joueuses et joueurs des équipes nationales"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "uv==0.6.5",
+    "streamlit==1.43.2",
+    "pandas==2.2.3"
+]
