@@ -1,0 +1,262 @@
+[
+    {
+      "config": {
+        "defaultAggregated": true,
+        "geoms": [
+          "auto"
+        ],
+        "coordSystem": "generic",
+        "limit": -1,
+        "timezoneDisplayOffset": 0
+      },
+      "encodings": {
+        "dimensions": [
+          {
+            "fid": "ID_JOUEUR",
+            "name": "ID_JOUEUR",
+            "basename": "ID_JOUEUR",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_NOM_COMPLET",
+            "name": "LB_NOM_COMPLET",
+            "basename": "LB_NOM_COMPLET",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "ID_CLUB",
+            "name": "ID_CLUB",
+            "basename": "ID_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_NOM_CLUB",
+            "name": "LB_NOM_CLUB",
+            "basename": "LB_NOM_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "CD_COMMUNE_CLUB",
+            "name": "CD_COMMUNE_CLUB",
+            "basename": "CD_COMMUNE_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_NOM_COMMUNE_CLUB",
+            "name": "LB_NOM_COMMUNE_CLUB",
+            "basename": "LB_NOM_COMMUNE_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "CD_DEPARTEMENT_CLUB",
+            "name": "CD_DEPARTEMENT_CLUB",
+            "basename": "CD_DEPARTEMENT_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_DEPARTEMENT_CLUB",
+            "name": "LB_DEPARTEMENT_CLUB",
+            "basename": "LB_DEPARTEMENT_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "CD_REGION_CLUB",
+            "name": "CD_REGION_CLUB",
+            "basename": "CD_REGION_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_REGION_CLUB",
+            "name": "LB_REGION_CLUB",
+            "basename": "LB_REGION_CLUB",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_COMITE",
+            "name": "LB_COMITE",
+            "basename": "LB_COMITE",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_LIGUE",
+            "name": "LB_LIGUE",
+            "basename": "LB_LIGUE",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "CD_SAISON",
+            "name": "CD_SAISON",
+            "basename": "CD_SAISON",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_SAISON",
+            "name": "LB_SAISON",
+            "basename": "LB_SAISON",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "DT_SAISON_DEBUT",
+            "name": "DT_SAISON_DEBUT",
+            "basename": "DT_SAISON_DEBUT",
+            "semanticType": "temporal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "DT_SAISON_FIN",
+            "name": "DT_SAISON_FIN",
+            "basename": "DT_SAISON_FIN",
+            "semanticType": "temporal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "ID_CATEGORIE",
+            "name": "ID_CATEGORIE",
+            "basename": "ID_CATEGORIE",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "CD_CATEGORIE",
+            "name": "CD_CATEGORIE",
+            "basename": "CD_CATEGORIE",
+            "semanticType": "quantitative",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "LB_CATEGORIE",
+            "name": "LB_CATEGORIE",
+            "basename": "LB_CATEGORIE",
+            "semanticType": "nominal",
+            "analyticType": "dimension",
+            "offset": 0
+          },
+          {
+            "fid": "gw_mea_key_fid",
+            "name": "Measure names",
+            "analyticType": "dimension",
+            "semanticType": "nominal"
+          }
+        ],
+        "measures": [
+          {
+            "fid": "NM_AN_NAISSANCE",
+            "name": "NM_AN_NAISSANCE",
+            "basename": "NM_AN_NAISSANCE",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum",
+            "offset": 0
+          },
+          {
+            "fid": "GEO_LATITUDE_CLUB",
+            "name": "GEO_LATITUDE_CLUB",
+            "basename": "GEO_LATITUDE_CLUB",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum",
+            "offset": 0
+          },
+          {
+            "fid": "GEO_LONGITUDE_CLUB",
+            "name": "GEO_LONGITUDE_CLUB",
+            "basename": "GEO_LONGITUDE_CLUB",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum",
+            "offset": 0
+          },
+          {
+            "fid": "gw_count_fid",
+            "name": "Row count",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum",
+            "computed": true,
+            "expression": {
+              "op": "one",
+              "params": [],
+              "as": "gw_count_fid"
+            }
+          },
+          {
+            "fid": "gw_mea_val_fid",
+            "name": "Measure values",
+            "analyticType": "measure",
+            "semanticType": "quantitative",
+            "aggName": "sum"
+          }
+        ],
+        "rows": [],
+        "columns": [],
+        "color": [],
+        "opacity": [],
+        "size": [],
+        "shape": [],
+        "radius": [],
+        "theta": [],
+        "longitude": [],
+        "latitude": [],
+        "geoId": [],
+        "details": [],
+        "filters": [],
+        "text": []
+      },
+      "layout": {
+        "showActions": false,
+        "showTableSummary": false,
+        "stack": "stack",
+        "interactiveScale": false,
+        "zeroScale": true,
+        "size": {
+          "mode": "auto",
+          "width": 320,
+          "height": 200
+        },
+        "format": {},
+        "geoKey": "name",
+        "resolve": {
+          "x": false,
+          "y": false,
+          "color": false,
+          "opacity": false,
+          "shape": false,
+          "size": false
+        }
+      },
+      "visId": "gw__obZ",
+      "name": "Chart 1"
+    }
+  ]
