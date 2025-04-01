@@ -35,7 +35,7 @@ def load_motherduck_data(token_md, database_name, schema_name, table_name):
 
 def get_dataset():
     """
-    Fonction centralisée pour récupérer le dataset depuis MotherDuck
+    Fonction centralisée pour récupérer les datasets depuis MotherDuck
     Returns:
         pandas.DataFrame: DataFrame chargé
     """

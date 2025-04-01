@@ -1,6 +1,6 @@
 import streamlit as st
 import plotly.express as px
-from utils.calculations import data_analyzer
+from utils.calculations_old import data_analyzer
 
 # --- SETUP PAGE ---
 def page_clubs():

@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.calculations import data_analyzer
+from utils.calculations_old import data_analyzer
 
 # --- SETUP PAGE ---
 def page_categories():
