@@ -15,4 +15,6 @@ dependencies = [
     "plotly>=6.0.1",
     "streamlit-antd-components>=0.3.2",
     "streamlit-option-menu>=0.4.0",
+    "folium>=0.19.5",
+    "streamlit-folium>=0.24.0",
 ]
