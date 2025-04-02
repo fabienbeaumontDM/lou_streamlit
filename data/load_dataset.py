@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from data.data_loader import load_motherduck_data
+from utils.data_loader import load_motherduck_data
 
 # Paramètres de connexion communs
 token_md = st.secrets.get("MOTHERDUCK_TOKEN", "default_token")

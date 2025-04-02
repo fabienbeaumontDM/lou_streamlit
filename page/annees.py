@@ -1,6 +1,5 @@
 import streamlit as st
 import plotly.express as px
-from utils.calculations_old import data_analyzer
 
 # --- SETUP PAGE ---
 def page_annees():
@@ -9,13 +8,8 @@ def page_annees():
     <h1><i class="bi bi-calendar3"></i> Années</h1>
     """, unsafe_allow_html=True)
     
-    # Distribution par années
-    distribution = data_analyzer.get_years_distribution()
-    
-    if distribution is not None:
-        st.dataframe(distribution)
-        
-        # Graphique de distribution
-        fig = data_analyzer.create_years_chart()
-        if fig:
-            st.plotly_chart(fig)
+    # Avertissement
+    with st.expander("En cours de développement"):
+        st.write("""
+        Ce site est encore en cours de développement. Certaines fonctionnalités peuvent ne pas fonctionner comme prévu.
+        """)

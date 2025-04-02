@@ -17,7 +17,8 @@ def page_a_propos():
     ## Technologies Utilisées
     - Streamlit
     - Pandas
-    - Plotly
-    - Motherduck
+    - Numpy
+    - DuckDB / Motherduck
+    - streamlit-folium
     """)
 

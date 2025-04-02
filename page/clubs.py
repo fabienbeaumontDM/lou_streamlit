@@ -1,6 +1,5 @@
 import streamlit as st
 import plotly.express as px
-from utils.calculations_old import data_analyzer
 
 # --- SETUP PAGE ---
 def page_clubs():
@@ -9,17 +8,8 @@ def page_clubs():
     <h1><i class="bi bi-award"></i> Clubs</h1>
     """, unsafe_allow_html=True)
     
-    # Distribution des clubs
-    distribution = data_analyzer.get_clubs_distribution()
-    
-    if distribution is not None:
-        st.dataframe(distribution)
-        
-        # Graphique de distribution des clubs
-        fig = px.bar(
-            x=distribution.index, 
-            y=distribution.values, 
-            title='Distribution des Clubs'
-        )
-        st.plotly_chart(fig)
-
+    # Avertissement
+    with st.expander("En cours de développement"):
+        st.write("""
+        Ce site est encore en cours de développement. Certaines fonctionnalités peuvent ne pas fonctionner comme prévu.
+        """)

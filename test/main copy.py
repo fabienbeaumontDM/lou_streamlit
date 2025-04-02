@@ -1,5 +1,5 @@
 import streamlit as st
-from data.data_loader import get_dataset
+from utils.data_loader import get_dataset
 
 # --- CONFIG PAGE ---
 st.set_page_config(

@@ -1,5 +1,4 @@
 import streamlit as st
-from utils.calculations_old import data_analyzer
 
 # --- SETUP PAGE ---
 def page_categories():
@@ -8,14 +7,8 @@ def page_categories():
     <h1><i class="bi bi-bookmark-star"></i> Catégories</h1>
     """, unsafe_allow_html=True)
 
-    # Distribution des catégories
-    distribution = data_analyzer.get_categories_distribution()
-    
-    if distribution is not None:
-        st.dataframe(distribution)
-        
-        # Graphique de distribution
-        fig = data_analyzer.create_category_chart()
-        if fig:
-            st.plotly_chart(fig)
-
+    # Avertissement
+    with st.expander("En cours de développement"):
+        st.write("""
+        Ce site est encore en cours de développement. Certaines fonctionnalités peuvent ne pas fonctionner comme prévu.
+        """)
