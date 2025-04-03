@@ -23,3 +23,7 @@ Cette application est développée à [Streamlit](https://streamlit.io/). ([docu
   - exécuter la commande *uv pip install streamlit pandas*
   - exécuter la commande *pip freeze > requirements.txt* pour référencer les librairies utilisées dans le projet
 - Supprimer manuellement le fichier *hello.py*
+
+## Sites utiles
+
+- [Streamlit-antd-components](https://nicedouble-streamlitantdcomponentsdemo-app-middmy.streamlit.app/)

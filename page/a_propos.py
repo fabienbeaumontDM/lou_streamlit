@@ -20,5 +20,6 @@ def page_a_propos():
     - Numpy
     - DuckDB / Motherduck
     - streamlit-folium
+    - streamlit_antd_components
     """)
 

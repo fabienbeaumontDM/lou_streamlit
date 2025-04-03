@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit_antd_components as sac
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -11,10 +12,15 @@ def page_contact():
     """, unsafe_allow_html=True)
 
     # Avertissement
-    with st.expander("En cours de développement"):
-        st.write("""
-        Ce site est encore en cours de développement. Certaines fonctionnalités peuvent ne pas fonctionner comme prévu.
-        """)
+    sac.alert(label='En construction',
+              description='Ce site est encore en cours de développement. Certaines fonctionnalités peuvent ne pas fonctionner comme prévu.',
+              size='lg',
+              radius='lg',
+              variant='filled',
+              color='red',
+              banner=True,
+              icon=True,
+              closable=True)
 
     st.write("""
     ## Contactez-nous
