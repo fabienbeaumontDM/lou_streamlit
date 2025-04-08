@@ -21,5 +21,8 @@ def page_a_propos():
     - DuckDB / Motherduck
     - streamlit-folium
     - streamlit_antd_components
+    - plotly
+    - slickgrid
+    - bootstrap-icons
     """)
 
