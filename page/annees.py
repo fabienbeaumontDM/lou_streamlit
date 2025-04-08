@@ -5,7 +5,7 @@ import streamlit_antd_components as sac
 def page_annees():
     st.markdown("""
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <h1><i class="bi bi-calendar3"></i> Années</h1>
+    <h1><i class="bi bi-calendar3"></i> Années de naissance</h1>
     """, unsafe_allow_html=True)
     
     # Avertissement

@@ -20,7 +20,7 @@ def page_accueil():
     
     """)
 
-    st.markdown("""---""", unsafe_allow_html=True)  # Ligne de séparation    
+    st.divider()  # Ligne de séparation   
     
     #--- Chargement des données ---
 
@@ -33,7 +33,6 @@ def page_accueil():
     # Joueurs par catégorie et évolution
     df_kpi = df_kpi[["CD_SAISON","CD_CATEGORIE", "LB_CATEGORIE", "NB_JOUEUR", "EVOLUTION"]]  # Sélectionner les colonnes pertinentes
     df_kpi = df_kpi[df_kpi["CD_SAISON"] == 5]  # Filtrer pour la saison 2024-2025 (CD_SAISON = 5)
-    df_kpi = df_kpi.sort_values(by="CD_CATEGORIE", ascending=False)  # Trier par CD_CATEGORIE de manière décroissante
     df_kpi = df_kpi.reset_index(drop=True)  # Réinitialiser l'index
 
     if df_kpi.empty:
@@ -42,8 +41,8 @@ def page_accueil():
     
     # Nb de joueurs par catégorie et par saison
     df_histo_categorie = df_histo_categorie[["CD_SAISON","LB_SAISON","CD_CATEGORIE", "LB_CATEGORIE", "NB_JOUEUR"]]  # Sélectionner les colonnes pertinentes
-    df_histo_categorie = df_histo_categorie[df_histo_categorie["CD_SAISON"] != 99]  # Exclure les totaux
-    df_histo_categorie = df_histo_categorie[df_histo_categorie["CD_CATEGORIE"] != 99]  # Exclure les totaux
+    df_histo_categorie = df_histo_categorie[df_histo_categorie["CD_SAISON"] != 0]  # Exclure les totaux
+    df_histo_categorie = df_histo_categorie[df_histo_categorie["CD_CATEGORIE"] != 0]  # Exclure les totaux
     df_histo_categorie = df_histo_categorie.sort_values(by=["CD_SAISON", "CD_CATEGORIE"], ascending=[True, True])  # Trier par CD_SAISON et CD_CATEGORIE
 
     if df_histo_categorie.empty:
@@ -99,6 +98,8 @@ def page_accueil():
         st.subheader("Historique du nombre de joueurs par catégorie")
         col1, col2 = st.columns([2, 1])  # Crée deux colonnes pour l'affichage
         with col1:
+            df_histo_categorie = df_histo_categorie[df_histo_categorie["CD_CATEGORIE"] != 0]  # Exclure les totaux
+            df_histo_categorie = df_histo_categorie[df_histo_categorie["CD_SAISON"] != 0]  # Exclure les totaux
             chart = alt.Chart(df_histo_categorie).mark_bar().encode(
                 x=alt.X("LB_SAISON", title=None,
                         sort=alt.EncodingSortField(field='CD_SAISON', order='ascending')),
@@ -147,7 +148,7 @@ def page_accueil():
             La chute est particulièrement marquée pour la saison 2024-2025 dans la catégorie **Moins de 15 ans** avec une **chute de 9%**.
             """, unsafe_allow_html=True)
 
-    st.markdown("""---""", unsafe_allow_html=True)  # Ligne de séparation 
+    st.divider()  # Ligne de séparation
 
     # Répartition des joueurs par club de provenance
     st.subheader("Répartition des joueurs par club de provenance")
@@ -202,8 +203,9 @@ def page_accueil():
     else:
         st.write("Aucune donnée disponible pour afficher les graphiques.")
 
-
     # Carte de répartition des joueurs par club de provenance
+    st.subheader("Carte des clubs de provenance")
+
     # Coordonnées du LOU Rugby (par exemple : Lyon, France)
     lou_coordinates = [45.753320365, 4.8694300340000005]  # Latitude et longitude du LOU Rugby
 
@@ -237,7 +239,6 @@ def page_accueil():
             ).add_to(m)
 
     # Afficher la carte dans Streamlit
-    st_folium(m, width=1000, height=700)
+    st_folium(m, use_container_width=True, height=700)
 
-
-
+    st.divider()  # Ligne de séparation

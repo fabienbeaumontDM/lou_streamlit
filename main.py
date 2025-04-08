@@ -60,7 +60,7 @@ def main():
         # Menu principal
         selected_page = option_menu(
             menu_title=None,  # Pas de titre
-            options=["Accueil", "Catégories", "Années", "Clubs", "Joueurs", "À Propos", "Contact"],
+            options=["Accueil", "Catégories et saisons", "Années de naissance", "Clubs", "Joueurs", "À Propos", "Contact"],
             icons=["house", "bookmark-star", "calendar3", "award", "people", "info-circle", "envelope"],
             menu_icon=None,
             default_index=0
@@ -69,9 +69,9 @@ def main():
     # Routing des pages
     if selected_page == "Accueil":
         page_accueil()
-    elif selected_page == "Catégories":
+    elif selected_page == "Catégories et saisons":
         page_categories()
-    elif selected_page == "Années":
+    elif selected_page == "Années de naissance":
         page_annees()
     elif selected_page == "Clubs":
         page_clubs()
