@@ -208,13 +208,16 @@ def page_accueil():
 
     # Coordonnées du LOU Rugby (par exemple : Lyon, France)
     lou_coordinates = [45.753320365, 4.8694300340000005]  # Latitude et longitude du LOU Rugby
+    # Coordonnées centrales de la France
+    france_coordinates = [46.603354, 1.888334]  # Latitude et longitude de la France
+    zoom_level = 6  # Niveau de zoom pour afficher toute la France   
 
     # Extraire les informations pour le LOU
     lou_data = df_provenance_detail[df_provenance_detail["GROUPE_CLUB_SAISON_PRECEDENTE"] == "LOU"]
     lou_nb_joueurs = lou_data["NB_JOUEUR"].sum() if not lou_data.empty else 0
 
     # Créer une carte centrée dynamiquement
-    m = folium.Map(location=lou_coordinates, zoom_start=10, control_scale=True)
+    m = folium.Map(location=france_coordinates, zoom_start=zoom_level, control_scale=True)
 
     # Ajouter un point noir fixe pour le LOU
     folium.Marker(

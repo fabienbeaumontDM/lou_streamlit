@@ -21,3 +21,9 @@ def load_joueurs_club_saison_precedente_detail_nb():
 def load_joueurs_club_saison_precedente_nb():
     table_name = "joueurs_club_saison_precedente_nb"
     return load_motherduck_data(token_md, database_name, schema_name, table_name)
+
+@st.cache_data(ttl=3600)
+def load_joueurs_club_saison_suivante_detail_nb():
+    table_name = "joueurs_club_saison_suivante_detail_nb"
+    return load_motherduck_data(token_md, database_name, schema_name, table_name)
+
