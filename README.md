@@ -24,6 +24,14 @@ Cette application est développée à [Streamlit](https://streamlit.io/). ([docu
   - exécuter la commande *pip freeze > requirements.txt* pour référencer les librairies utilisées dans le projet
 - Supprimer manuellement le fichier *hello.py*
 
+## Cloner le projet
+
+- Ouvrir un terminal et se placer dans le répertoire de l'application
+- Exécuter la commande *git clone 
+- Se placer dans le répertoire du projet
+- faire **uv sync** dans un terminal pour initialiser un environnement Python
+- faire **.venv\Scripts\activate** pour activer l'environnement virtuel
+
 ## Sites utiles
 
 - [Streamlit-antd-components](https://nicedouble-streamlitantdcomponentsdemo-app-middmy.streamlit.app/)
